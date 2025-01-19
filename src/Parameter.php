@@ -155,8 +155,8 @@ class Parameter
      *
      * @link https://swagger.io/specification/v2/
      */
-    #[Describe(['required'])]
-    public string $type;
+    #[Describe(['nullable'])]
+    public ?string $type;
 
     /**
      * The extending format for the previously mentioned type. See Data Type
