@@ -1,15 +1,15 @@
-# Zerotoprod\:package_namespace
+# Zerotoprod\DataModelSwagger
 
 ![](art/logo.png)
 
-[![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/:package_slug)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/:package_slug/test.yml?label=tests)](https://github.com/zero-to-prod/:package_slug/actions)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/:package_slug?color=blue)](https://packagist.org/packages/zero-to-prod/:package_slug/stats)
-[![php](https://img.shields.io/packagist/php-v/zero-to-prod/:package_slug.svg?color=purple)](https://packagist.org/packages/zero-to-prod/:package_slug/stats)
-[![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/:package_slug?color=f28d1a)](https://packagist.org/packages/zero-to-prod/:package_slug)
-[![License](https://img.shields.io/packagist/l/zero-to-prod/:package_slug?color=pink)](https://github.com/zero-to-prod/:package_slug/blob/main/LICENSE.md)
-[![wakatime](https://wakatime.com/badge/github/zero-to-prod/:package_slug.svg)](https://wakatime.com/badge/github/zero-to-prod/:package_slug)
-[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod/:package_slug?branch=main)](https://hitsofcode.com/github/zero-to-prod/:package_slug/view?branch=main)
+[![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/data-model-swagger)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/data-model-swagger/test.yml?label=tests)](https://github.com/zero-to-prod/data-model-swagger/actions)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/data-model-swagger?color=blue)](https://packagist.org/packages/zero-to-prod/data-model-swagger/stats)
+[![php](https://img.shields.io/packagist/php-v/zero-to-prod/data-model-swagger.svg?color=purple)](https://packagist.org/packages/zero-to-prod/data-model-swagger/stats)
+[![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/data-model-swagger?color=f28d1a)](https://packagist.org/packages/zero-to-prod/data-model-swagger)
+[![License](https://img.shields.io/packagist/l/zero-to-prod/data-model-swagger?color=pink)](https://github.com/zero-to-prod/data-model-swagger/blob/main/LICENSE.md)
+[![wakatime](https://wakatime.com/badge/github/zero-to-prod/data-model-swagger.svg)](https://wakatime.com/badge/github/zero-to-prod/data-model-swagger)
+[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod/data-model-swagger?branch=main)](https://hitsofcode.com/github/zero-to-prod/data-model-swagger/view?branch=main)
 
 ## Contents
 
@@ -22,30 +22,32 @@
 
 ## Introduction
 
-
-
 ## Requirements
 
-- PHP 7.1 or higher.
+- PHP 8.1 or higher.
 
 ## Installation
 
-Install `Zerotoprod\:package_namespace` via [Composer](https://getcomposer.org/):
+Install `Zerotoprod\DataModelSwagger` via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require zero-to-prod/:package_slug
+composer require zero-to-prod/data-model-swagger
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
 
 ## Usage
 
+Create a DataModel from a Swagger document like this:
 
+```php
+\Zerotoprod\DataModelSwagger\Swagger::from(json_decode($swagger_file, true))
+```
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues](https://github.com/zero-to-prod/:package_slug/issues) page if you want to contribute.
+Feel free to check the [issues](https://github.com/zero-to-prod/data-model-swagger/issues) page if you want to contribute.
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
