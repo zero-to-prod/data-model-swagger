@@ -4,6 +4,7 @@
 
 [![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/data-model-swagger)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/data-model-swagger/test.yml?label=test)](https://github.com/zero-to-prod/data-model-swagger/actions)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/data-model-swagger/backwards_compatibility.yml?label=backwards_compatibility)](https://github.com/zero-to-prod/data-model-swagger/actions)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/data-model-swagger?color=blue)](https://packagist.org/packages/zero-to-prod/data-model-swagger/stats)
 [![php](https://img.shields.io/packagist/php-v/zero-to-prod/data-model-swagger.svg?color=purple)](https://packagist.org/packages/zero-to-prod/data-model-swagger/stats)
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/data-model-swagger?color=f28d1a)](https://packagist.org/packages/zero-to-prod/data-model-swagger)
