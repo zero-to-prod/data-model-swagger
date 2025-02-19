@@ -16,7 +16,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
  * JSON Schema Validation. Unless stated otherwise, the property definitions
  * follow the JSON Schema specification as referenced here.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Schema
 {
@@ -25,15 +26,17 @@ class Schema
     /**
      * **REQUIRED**. The reference string.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $ref
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const ref = '$ref';
 
     /**
      * The reference string.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable', 'from' => self::ref])]
     public null|string $ref;
@@ -42,8 +45,9 @@ class Schema
      * While relying on JSON Schema’s defined formats, the OAS offers a few
      * additional predefined formats.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $format
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const format = 'format';
 
@@ -51,7 +55,8 @@ class Schema
      * While relying on JSON Schema’s defined formats, the OAS offers a few
      * additional predefined formats.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $format;
@@ -65,9 +70,10 @@ class Schema
      * explanation about the purpose of the instance described by this
      * schema.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-6.1
      * @see  $title
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const title = 'title';
 
@@ -80,8 +86,9 @@ class Schema
      * explanation about the purpose of the instance described by this
      * schema.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-6.1
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $title;
@@ -89,17 +96,19 @@ class Schema
     /**
      * GFM syntax can be used for rich text representation
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
      * @see  $description
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const description = 'description';
 
     /**
      * GFM syntax can be used for rich text representation
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $description;
@@ -111,8 +120,9 @@ class Schema
      * Object defined at the same level. For example, if `type` is
      * `"string"`, then `default` can be `"foo"` but cannot be 1.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $default
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const default = 'default';
 
@@ -123,7 +133,8 @@ class Schema
      * Object defined at the same level. For example, if `type` is
      * `"string"`, then `default` can be `"foo"` but cannot be 1.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public mixed $default;
@@ -134,9 +145,10 @@ class Schema
      * A numeric instance is only valid if division by this keyword's value
      * results in an integer.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.1
      * @see  $multipleOf
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const multipleOf = 'multipleOf';
 
@@ -146,8 +158,9 @@ class Schema
      * A numeric instance is only valid if division by this keyword's value
      * results in an integer.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.1
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public null|float|int $multipleOf;
@@ -161,9 +174,10 @@ class Schema
      * value, or else if the instance is less than or exactly equal to the
      * provided value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.2
      * @see  $maximum
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const maximum = 'maximum';
 
@@ -176,8 +190,9 @@ class Schema
      * value, or else if the instance is less than or exactly equal to the
      * provided value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public null|int|float $maximum;
@@ -192,9 +207,10 @@ class Schema
      * false (or not specified), then a numeric instance MAY be equal to the
      * value of "maximum".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.3
      * @see  $exclusiveMaximum
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const exclusiveMaximum = 'exclusiveMaximum';
 
@@ -208,8 +224,9 @@ class Schema
      * false (or not specified), then a numeric instance MAY be equal to the
      * value of "maximum".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.3
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => false])]
     public bool $exclusiveMaximum;
@@ -223,9 +240,10 @@ class Schema
      * value, or else if the instance is greater than or exactly equal to
      * the provided value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.4
      * @see  $minimum
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const minimum = 'minimum';
 
@@ -238,8 +256,9 @@ class Schema
      * value, or else if the instance is greater than or exactly equal to
      * the provided value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.4
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public null|int|float $minimum;
@@ -254,9 +273,10 @@ class Schema
      * false (or not specified), then a numeric instance MAY be equal to the
      * value of "minimum".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.5
      * @see  $exclusiveMinimum
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const exclusiveMinimum = 'exclusiveMinimum';
 
@@ -270,8 +290,9 @@ class Schema
      * false (or not specified), then a numeric instance MAY be equal to the
      * value of "minimum".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.5
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => false])]
     public bool $exclusiveMinimum;
@@ -288,9 +309,10 @@ class Schema
      * The length of a string instance is defined as the number of its
      * characters as defined by RFC 7159 [RFC7159].
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.6
      * @see  $maxLength
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const maxLength = 'maxLength';
 
@@ -306,8 +328,9 @@ class Schema
      * The length of a string instance is defined as the number of its
      * characters as defined by RFC 7159 [RFC7159].
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.6
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?int $maxLength;
@@ -325,9 +348,10 @@ class Schema
      * "minLength", if absent, may be considered as being present with
      * integer value 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.7
      * @see  $minLength
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const minLength = 'minLength';
 
@@ -344,8 +368,9 @@ class Schema
      * "minLength", if absent, may be considered as being present with
      * integer value 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.7
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => 0])]
     public int $minLength;
@@ -359,9 +384,10 @@ class Schema
      * matches the instance successfully.  Recall: regular expressions are
      * not implicitly anchored.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.8
      * @see  $pattern
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const pattern = 'pattern';
 
@@ -378,8 +404,9 @@ class Schema
      * "pattern", if absent, may be considered as being present with
      * integer value 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.7
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => 0])]
     public int|string $pattern;
@@ -391,9 +418,10 @@ class Schema
      * An array instance is valid against "maxItems" if its size is less
      * than, or equal to, the value of this keyword.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.10
      * @see  $maxItems
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const maxItems = 'maxItems';
 
@@ -404,8 +432,9 @@ class Schema
      * An array instance is valid against "maxItems" if its size is less
      * than, or equal to, the value of this keyword.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.10
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?int $maxItems;
@@ -420,9 +449,10 @@ class Schema
      * If this keyword is not present, it may be considered present with a
      * value of 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.11
      * @see  $minItems
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const minItems = 'minItems';
 
@@ -436,8 +466,9 @@ class Schema
      * If this keyword is not present, it may be considered present with a
      * value of 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.11
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => 0])]
     public int $minItems;
@@ -452,9 +483,10 @@ class Schema
      * If not present, this keyword may be considered present with boolean
      * value false.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.12
      * @see  $uniqueItems
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const uniqueItems = 'uniqueItems';
 
@@ -465,8 +497,9 @@ class Schema
      * An object instance is valid against "maxProperties" if its number of
      * properties is less than, or equal to, the value of this keyword.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.13
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => false])]
     public bool $uniqueItems;
@@ -478,9 +511,10 @@ class Schema
      * An object instance is valid against "maxProperties" if its number of
      * properties is less than, or equal to, the value of this keyword.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.13
      * @see  $maxProperties
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const maxProperties = 'maxProperties';
 
@@ -491,8 +525,9 @@ class Schema
      * An object instance is valid against "maxProperties" if its number of
      * properties is less than, or equal to, the value of this keyword.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.13
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?int $maxProperties;
@@ -507,9 +542,10 @@ class Schema
      * If this keyword is not present, it may be considered present with a
      * value of 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.14
      * @see  $minProperties
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const minProperties = 'minProperties';
 
@@ -523,8 +559,9 @@ class Schema
      * If this keyword is not present, it may be considered present with a
      * value of 0.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.14
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => 0])]
     public int $minProperties;
@@ -537,9 +574,10 @@ class Schema
      * An object instance is valid against this keyword if its property set
      * contains all elements in this keyword's array value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.15
      * @see  $required
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const required = 'required';
 
@@ -551,8 +589,9 @@ class Schema
      * An object instance is valid against this keyword if its property set
      * contains all elements in this keyword's array value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.15
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $required;
@@ -566,9 +605,10 @@ class Schema
      * An instance validates successfully against this keyword if its value
      * is equal to one of the elements in this keyword's array value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.20
      * @see  $enum
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const enum = 'enum';
 
@@ -581,8 +621,9 @@ class Schema
      * An instance validates successfully against this keyword if its value
      * is equal to one of the elements in this keyword's array value.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://datatracker.ietf.org/doc/html/draft-wright-json-schema-validation-00#section-5.20
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $enum;
@@ -590,15 +631,17 @@ class Schema
     /**
      * Value _MUST_ be a string. Multiple types via an array are not supported
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $type
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const type = 'type';
 
     /**
      * Value _MUST_ be a string. Multiple types via an array are not supported
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $type;
@@ -608,8 +651,9 @@ class Schema
      * schema _MUST_ be of a Schema Object and not a standard JSON Schema.
      * `items` _MUST_ be present if type is "array".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $items
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const items = 'items';
 
@@ -618,7 +662,8 @@ class Schema
      * schema _MUST_ be of a Schema Object and not a standard JSON Schema.
      * `items` _MUST_ be present if type is "array".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'items']])]
     public null|self $items;
@@ -628,8 +673,9 @@ class Schema
      * schema _MUST_ be of a Schema Object and not a standard JSON Schema.
      * `items` _MUST_ be present if type is "array".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $items
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function items($value, array $context): Schema|Reference|null
     {
@@ -643,8 +689,9 @@ class Schema
     /**
      * Inline or referenced schema _MUST_ be of a Schema Object and not a standard JSON Schema.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $allOf
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const allOf = 'allOf';
 
@@ -653,7 +700,8 @@ class Schema
      *
      * @var array<int, self> $allOf
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'allOf']])]
     public array $allOf;
@@ -661,8 +709,9 @@ class Schema
     /**
      * Inline or referenced schema _MUST_ be of a Schema Object and not a standard JSON Schema.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $allOf
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function allOf($value, array $context): array
     {
@@ -678,8 +727,9 @@ class Schema
      * Property definitions _MUST_ be a Schema Object and not a standard
      * JSON Schema (inline or referenced).
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $properties
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const properties = 'properties';
 
@@ -689,7 +739,8 @@ class Schema
      *
      * @var ?self[]
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'properties']])]
     public array|Schema $properties;
@@ -698,8 +749,9 @@ class Schema
      * Property definitions _MUST_ be a Schema Object and not a standard
      * JSON Schema (inline or referenced).
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $properties
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function properties($value, array $context): Schema|array|null
     {
@@ -716,8 +768,9 @@ class Schema
      * Schema Object and not a standard JSON Schema. Consistent with JSON
      * Schema, `additionalProperties` defaults to `true`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $additionalProperties
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const additionalProperties = 'additionalProperties';
 
@@ -726,7 +779,8 @@ class Schema
      * Schema Object and not a standard JSON Schema. Consistent with JSON
      * Schema, `additionalProperties` defaults to `true`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'additionalProperties']])]
     public bool|self $additionalProperties;
@@ -736,8 +790,9 @@ class Schema
      * Schema Object and not a standard JSON Schema. Consistent with JSON
      * Schema, `additionalProperties` defaults to `true`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $additionalProperties
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function additionalProperties($value, array $context): Schema|bool
     {
@@ -759,8 +814,9 @@ class Schema
      * and it MUST be in the required property list. When used, the value
      * MUST be the name of this schema or any schema that inherits it.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $discriminator
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const discriminator = 'discriminator';
 
@@ -771,7 +827,8 @@ class Schema
      * and it MUST be in the required property list. When used, the value
      * MUST be the name of this schema or any schema that inherits it.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $discriminator;
@@ -786,8 +843,9 @@ class Schema
      * `readOnly` and `writeOnly` being `true`. Default value
      * is `false`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $readOnly
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const readOnly = 'readOnly';
 
@@ -801,7 +859,8 @@ class Schema
      * `readOnly` and `writeOnly` being `true`. Default value
      * is `false`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => false])]
     public bool $readOnly;
@@ -811,8 +870,9 @@ class Schema
      * root schemas. Adds additional metadata to describe the XML
      * representation of this property.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $xml
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const xml = 'xml';
 
@@ -821,7 +881,8 @@ class Schema
      * root schemas. Adds additional metadata to describe the XML
      * representation of this property.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Xml $xml;
@@ -829,15 +890,17 @@ class Schema
     /**
      * Additional external documentation for this schema.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $externalDocs
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const externalDocs = 'externalDocs';
 
     /**
      * Additional external documentation for this schema.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?ExternalDocumentation $externalDocs;
@@ -848,8 +911,9 @@ class Schema
      * YAML, a string value can be used to contain the example with escaping
      * where necessary.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $example
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const example = 'example';
 
@@ -859,7 +923,8 @@ class Schema
      * YAML, a string value can be used to contain the example with escaping
      * where necessary.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public mixed $example;

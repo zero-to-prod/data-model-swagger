@@ -8,8 +8,9 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
 /**
  * Describes the operations available on a single path. A Path Item may be empty, due to ACL constraints. The path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2/
  * @see  https://swagger.io/specification/v2/#security-filtering
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class PathItem
 {
@@ -21,8 +22,9 @@ class PathItem
      * the referenced definition and this Path Item's definition, the behavior is
      * undefined.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $ref
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const ref = '$ref';
 
@@ -32,7 +34,8 @@ class PathItem
      * the referenced definition and this Path Item's definition, the behavior is
      * undefined.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable', 'from' => self::ref])]
     public ?string $ref;
@@ -40,15 +43,17 @@ class PathItem
     /**
      * A definition of a GET operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $get
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const get = 'get';
 
     /**
      * A definition of a GET operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $get;
@@ -56,15 +61,17 @@ class PathItem
     /**
      * A definition of a PUT operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $put
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const put = 'put';
 
     /**
      * A definition of a PUT operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $put;
@@ -72,15 +79,17 @@ class PathItem
     /**
      * A definition of a POST operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $post
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const post = 'post';
 
     /**
      * A definition of a POST operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $post;
@@ -88,15 +97,17 @@ class PathItem
     /**
      * A definition of a DELETE operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $delete
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const delete = 'delete';
 
     /**
      * A definition of a DELETE operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $delete;
@@ -104,15 +115,17 @@ class PathItem
     /**
      * A definition of a OPTIONS operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $options
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const options = 'options';
 
     /**
      * A definition of a OPTIONS operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $options;
@@ -120,15 +133,17 @@ class PathItem
     /**
      * A definition of a HEAD operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $head
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const head = 'head';
 
     /**
      * A definition of a HEAD operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $head;
@@ -136,15 +151,17 @@ class PathItem
     /**
      * A definition of a PATCH operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $patch
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const patch = 'patch';
 
     /**
      * A definition of a PATCH operation on this path.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Operation $patch;
@@ -157,8 +174,9 @@ class PathItem
      * to parameters that are defined at the Swagger Object's parameters. There can be
      * one "body" parameter at most.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $parameters
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const parameters = 'parameters';
 
@@ -170,7 +188,8 @@ class PathItem
      * to parameters that are defined at the Swagger Object's parameters. There can be
      * one "body" parameter at most.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'parameters'],
@@ -186,8 +205,9 @@ class PathItem
      * to parameters that are defined at the Swagger Object's parameters. There can be
      * one "body" parameter at most.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $parameters
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function parameters($value, array $context): array
     {

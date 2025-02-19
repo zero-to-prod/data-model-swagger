@@ -14,7 +14,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
  * The Reference Object is a JSON Reference that uses a JSON Pointer as its value.
  * For this specification, only canonical dereferencing is supported.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Reference
 {
@@ -23,15 +24,17 @@ class Reference
     /**
      * **REQUIRED**. The reference string.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $ref
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const ref = '$ref';
 
     /**
      * **REQUIRED**. The reference string.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'ref']])]
     public string $ref;
@@ -39,8 +42,9 @@ class Reference
     /**
      * **REQUIRED**. The reference string.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $ref
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function ref($value, $context)
     {

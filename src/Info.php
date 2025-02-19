@@ -10,7 +10,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
  * used by the clients if needed, and can be presented in the
  * Swagger-UI for convenience.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Info
 {
@@ -19,15 +20,17 @@ class Info
     /**
      * Required. The title of the application.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $title
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const title = 'title';
 
     /**
      * Required. The title of the application.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['required'])]
     public string $title;
@@ -36,9 +39,10 @@ class Info
      * A short description of the application. GFM syntax can be
      * used for rich text representation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
      * @see  $description
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const description = 'description';
 
@@ -46,8 +50,9 @@ class Info
      * A short description of the application. GFM syntax can be
      * used for rich text representation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable' => true])]
     public ?string $description;
@@ -55,15 +60,17 @@ class Info
     /**
      * The Terms of Service for the API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $termsOfService
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const termsOfService = 'termsOfService';
 
     /**
      * The Terms of Service for the API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $termsOfService;
@@ -72,8 +79,9 @@ class Info
      * Required Provides the version of the application API
      * (not to be confused with the specification version).
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $version
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const version = 'version';
 
@@ -81,7 +89,8 @@ class Info
      * Required Provides the version of the application API
      * (not to be confused with the specification version).
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['required'])]
     public string $version;
@@ -89,15 +98,17 @@ class Info
     /**
      * The contact information for the exposed API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $contact
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const contact = 'contact';
 
     /**
      * The contact information for the exposed API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?Contact $contact;
@@ -105,15 +116,17 @@ class Info
     /**
      * The license information for the exposed API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $licence
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const licence = 'licence';
 
     /**
      * The license information for the exposed API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?License $license;

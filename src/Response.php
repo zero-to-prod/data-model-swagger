@@ -9,7 +9,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
 /**
  * Describes a single response from an API Operation.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Response
 {
@@ -20,9 +21,10 @@ class Response
      * Required. A short description of the response. GFM
      * syntax can be used for rich text representation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
      * @see  $description
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const description = 'description';
 
@@ -30,8 +32,9 @@ class Response
      * Required. A short description of the response. GFM
      * syntax can be used for rich text representation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $description;
@@ -43,8 +46,9 @@ class Response
      * to the Schema Object, its root type value may also be "file".
      * This SHOULD be accompanied by a relevant produces mime-type.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $schema
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const schema = 'schema';
 
@@ -55,7 +59,8 @@ class Response
      * to the Schema Object, its root type value may also be "file".
      * This SHOULD be accompanied by a relevant produces mime-type.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'schema']])]
     public null|Schema $schema;
@@ -63,8 +68,9 @@ class Response
     /**
      * The schema defining the type used for the parameter.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $schema
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function schema($value, array $context): Schema|null
     {
@@ -78,8 +84,9 @@ class Response
     /**
      * A list of headers that are sent with the response.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $headers
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const headers = 'headers';
 
@@ -88,7 +95,8 @@ class Response
      *
      * @var array<string, Header> $headers
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -100,15 +108,17 @@ class Response
     /**
      * An example of the response message.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $examples
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const examples = 'examples';
 
     /**
      * An example of the response message.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $examples;

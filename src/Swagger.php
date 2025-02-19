@@ -8,7 +8,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
 /**
  * fka Swagger RESTful API Documentation Specification
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Swagger
 {
@@ -20,8 +21,9 @@ class Swagger
      * clients to interpret the API listing. The value MUST
      * be "2.0".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $swagger
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const swagger = 'swagger';
 
@@ -31,7 +33,8 @@ class Swagger
      * clients to interpret the API listing. The value MUST
      * be "2.0".
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['required'])]
     public string $swagger;
@@ -40,8 +43,9 @@ class Swagger
      * **Required**. Provides metadata about the API. The
      * metadata can be used by the clients if needed.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $info
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const info = 'info';
 
@@ -49,7 +53,8 @@ class Swagger
      * **Required**. Provides metadata about the API. The
      * metadata can be used by the clients if needed.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['required'])]
     public Info $info;
@@ -60,8 +65,9 @@ class Swagger
      * is not included, the host serving the documentation is to be used
      * (including the port). The host does not support path templating.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $host
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const host = 'host';
 
@@ -71,7 +77,8 @@ class Swagger
      * is not included, the host serving the documentation is to be used
      * (including the port). The host does not support path templating.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public null|string $host;
@@ -82,8 +89,9 @@ class Swagger
      * value MUST start with a leading slash (/). The basePath does not
      * support path templating.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $basePath
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const basePath = 'basePath';
 
@@ -93,7 +101,8 @@ class Swagger
      * value MUST start with a leading slash (/). The basePath does not
      * support path templating.
      *
-     * @link https://basePath.io/specification/v2/
+     * @see  https://basePath.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public null|string $basePath;
@@ -104,8 +113,9 @@ class Swagger
      * scheme to be used is the one used to access the Swagger
      * definition itself.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $schemes
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const schemes = 'schemes';
 
@@ -115,7 +125,8 @@ class Swagger
      * scheme to be used is the one used to access the Swagger
      * definition itself.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $schemes;
@@ -125,8 +136,9 @@ class Swagger
      * APIs but can be overridden on specific API calls. Value MUST
      * be as described under Mime Types.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $consumes
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const consumes = 'consumes';
 
@@ -135,7 +147,8 @@ class Swagger
      * APIs but can be overridden on specific API calls. Value MUST
      * be as described under Mime Types.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $consumes;
@@ -145,8 +158,9 @@ class Swagger
      * to all APIs but can be overridden on specific API calls.
      * Value MUST be as described under Mime Types.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $produces
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const produces = 'produces';
 
@@ -155,7 +169,8 @@ class Swagger
      * to all APIs but can be overridden on specific API calls.
      * Value MUST be as described under Mime Types.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $produces;
@@ -163,8 +178,9 @@ class Swagger
     /**
      * Required. The available paths and operations for the API.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $paths
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const paths = 'paths';
 
@@ -173,7 +189,8 @@ class Swagger
      *
      * @var array<string, PathItem> $paths
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -185,8 +202,9 @@ class Swagger
     /**
      * An object to hold data types produced and consumed by operations.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $definitions
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const definitions = 'definitions';
 
@@ -195,7 +213,8 @@ class Swagger
      *
      * @var array<string, Schema> $definitions
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -207,8 +226,9 @@ class Swagger
      * An object to hold parameters that can be used across operations. This
      * property does not define global parameters for all operations.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $parameters
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const parameters = 'parameters';
 
@@ -218,7 +238,8 @@ class Swagger
      *
      * @var array<string, Parameter> $parameters
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -230,8 +251,9 @@ class Swagger
      * An object to hold responses that can be used across operations. This
      * property does not define global responses for all operations.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $responses
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const responses = 'responses';
 
@@ -241,7 +263,8 @@ class Swagger
      *
      * @var array<string, Response> $responses
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -252,8 +275,9 @@ class Swagger
     /**
      * Security scheme definitions that can be used across the specification.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $securityDefinitions
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const securityDefinitions = 'securityDefinitions';
 
@@ -262,7 +286,8 @@ class Swagger
      *
      * @var array<string, SecurityScheme> $securityDefinitions
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -273,15 +298,17 @@ class Swagger
     /**
      * An element to hold various Objects for the OpenAPI Description.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $security
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const security = 'security';
 
     /**
      * An element to hold various Objects for the OpenAPI Description.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $security;
@@ -289,8 +316,9 @@ class Swagger
     /**
      * An element to hold various Objects for the OpenAPI Description.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $tags
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const tags = 'tags';
 
@@ -299,7 +327,8 @@ class Swagger
      *
      * @var Tag[] $tags
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -311,15 +340,17 @@ class Swagger
     /**
      * Additional external documentation for this tag.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $externalDocs
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const externalDocs = 'externalDocs';
 
     /**
      * Additional external documentation for this tag.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?ExternalDocumentation $externalDocs;

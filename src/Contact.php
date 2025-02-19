@@ -8,7 +8,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
 /**
  * Contact information for the exposed API.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Contact
 {
@@ -17,15 +18,17 @@ class Contact
     /**
      * The identifying name of the contact person/organization.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $name
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const name = 'name';
 
     /**
      * The identifying name of the contact person/organization.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $name;
@@ -33,15 +36,17 @@ class Contact
     /**
      * The URL pointing to the contact information. MUST be in the format of a URL.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $url
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const url = 'url';
 
     /**
      * The URL pointing to the contact information. MUST be in the format of a URL.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $url;
@@ -49,15 +54,17 @@ class Contact
     /**
      * The email address of the contact person/organization. MUST be in the format of an email address..
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $email
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const email = 'email';
 
     /**
      * The email address of the contact person/organization. MUST be in the format of an email address.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $email;

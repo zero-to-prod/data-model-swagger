@@ -9,7 +9,8 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
 /**
  * Describes a single API operation on a path.
  *
- * @link https://swagger.io/specification/v2/
+ * @see  https://swagger.io/specification/v2
+ * @link https://github.com/zero-to-prod/data-model-swagger
  */
 class Operation
 {
@@ -19,8 +20,9 @@ class Operation
      * A list of tags for API documentation control. Tags can be used for
      * logical grouping of operations by resources or any other qualifier.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $tags
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const tags = 'tags';
 
@@ -30,7 +32,8 @@ class Operation
      *
      * @var string[] $tags
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $tags;
@@ -39,8 +42,9 @@ class Operation
      * A short summary of what the operation does. For maximum readability
      * in the swagger-ui, this field SHOULD be less than 120 characters.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $summary
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const summary = 'summary';
 
@@ -48,7 +52,8 @@ class Operation
      * A short summary of what the operation does. For maximum readability
      * in the swagger-ui, this field SHOULD be less than 120 characters.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $summary;
@@ -57,9 +62,10 @@ class Operation
      * A verbose explanation of the operation behavior. GFM
      *  syntax can be used for rich text representation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
      * @see  $description
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const description = 'description';
 
@@ -67,8 +73,9 @@ class Operation
      * A verbose explanation of the operation behavior. GFM
      * syntax can be used for rich text representation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://guides.github.com/features/mastering-markdown/#-git-hub-flavored-markdown
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $description;
@@ -76,15 +83,17 @@ class Operation
     /**
      * Additional external documentation for this operation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $externalDocs
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const externalDocs = 'externalDocs';
 
     /**
      * Additional external documentation for this operation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?ExternalDocumentation $externalDocs;
@@ -95,8 +104,9 @@ class Operation
      * operationId to uniquely identify an operation, therefore, it is
      * recommended to follow common programming naming conventions.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $operationId
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const operationId = 'operationId';
 
@@ -106,7 +116,8 @@ class Operation
      * operationId to uniquely identify an operation, therefore, it is
      * recommended to follow common programming naming conventions.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['nullable'])]
     public ?string $operationId;
@@ -116,9 +127,10 @@ class Operation
      * definition at the Swagger Object. An empty value MAY be used to clear the
      * global definition. Value MUST be as described under Mime Types.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://swagger.io/specification/v2/#mime-types
      * @see  $tags
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const consumes = 'consumes';
 
@@ -129,8 +141,9 @@ class Operation
      *
      * @var string[] $consumes
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://swagger.io/specification/v2/#mime-types
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $consumes;
@@ -140,9 +153,10 @@ class Operation
      * at the Swagger Object. An empty value MAY be used to clear the global definition.
      * Value MUST be as described under Mime Types.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://swagger.io/specification/v2/#mime-types
      * @see  $tags
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const produces = 'produces';
 
@@ -153,8 +167,9 @@ class Operation
      *
      * @var string[] $produces
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  https://swagger.io/specification/v2/#mime-types
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $produces;
@@ -168,8 +183,9 @@ class Operation
      * defined at the Swagger Object's parameters. There can be one "body"
      * parameter at most.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $parameters
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const parameters = 'parameters';
 
@@ -184,7 +200,8 @@ class Operation
      *
      * @var array<string, Parameter|Reference> $parameters
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'parameters']])]
     public array $parameters;
@@ -198,8 +215,9 @@ class Operation
      * defined at the Swagger Object's parameters. There can be one "body"
      * parameter at most.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $parameters
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function parameters($value, array $context): array
     {
@@ -217,8 +235,9 @@ class Operation
      * **REQUIRED**. The list of possible responses as they are returned
      * from executing this operation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $responses
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const responses = 'responses';
 
@@ -228,7 +247,8 @@ class Operation
      *
      * @var array<string, Response> $examples
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['cast' => [self::class, 'responses']])]
     public array $responses;
@@ -237,8 +257,9 @@ class Operation
      * **REQUIRED**. The list of possible responses as they are returned
      * from executing this operation.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $responses
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public static function responses($value, array $context): array
     {
@@ -254,8 +275,9 @@ class Operation
      * "http", "https", "ws", "wss". The value overrides the Swagger Object
      * schemes definition.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $schemes
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const schemes = 'schemes';
 
@@ -266,7 +288,8 @@ class Operation
      *
      * @var string[] $schemes
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $schemes;
@@ -275,8 +298,9 @@ class Operation
      * Declares this operation to be deprecated. Consumers _SHOULD_ refrain
      * from usage of the declared operation. Default value is `false`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $deprecated
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const deprecated = 'deprecated';
 
@@ -284,7 +308,8 @@ class Operation
      * Declares this operation to be deprecated. Consumers _SHOULD_ refrain
      * from usage of the declared operation. Default value is `false`.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => false])]
     public bool $deprecated;
@@ -297,8 +322,9 @@ class Operation
      * top-level security. To remove a top-level security
      * declaration, an empty array can be used.
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2/
      * @see  $security
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     public const security = 'security';
 
@@ -312,7 +338,8 @@ class Operation
      *
      * @var array<string, string[]> $security
      *
-     * @link https://swagger.io/specification/v2/
+     * @see  https://swagger.io/specification/v2
+     * @link https://github.com/zero-to-prod/data-model-swagger
      */
     #[Describe(['default' => []])]
     public array $security;
