@@ -14,6 +14,7 @@ use Zerotoprod\DataModelSwagger\Helpers\DataModel;
  *
  * https://swagger.io/specification/v2
  * @link https://github.com/zero-to-prod/data-model-swagger
+ * DataModels for Swagger 2.0.*
  */
 class Xml
 {
