@@ -16,3 +16,4 @@
 /dock                     export-ignore
 /test.sh                  export-ignore
 /factories/               export-ignore
+/CLAUDE.md                export-ignore

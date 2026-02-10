@@ -218,7 +218,8 @@ class Swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
-        'type' => Schema::class
+        'type' => Schema::class,
+        'default' => []
     ])]
     public array $definitions;
 
@@ -243,7 +244,8 @@ class Swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
-        'type' => Parameter::class
+        'type' => Parameter::class,
+        'default' => []
     ])]
     public array $parameters;
 
@@ -268,7 +270,8 @@ class Swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
-        'type' => Response::class
+        'type' => Response::class,
+        'default' => []
     ])]
     public array $responses;
 
@@ -291,7 +294,8 @@ class Swagger
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
-        'type' => SecurityScheme::class
+        'type' => SecurityScheme::class,
+        'default' => []
     ])]
     public array $securityDefinitions;
 
